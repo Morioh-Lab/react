@@ -1,0 +1,39 @@
+{
+  "name": "@morioh/r-resource",
+  "version": "1.0.2",
+  "description": "React hook to dynamically load an external script, css and know when its loaded",  
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "webpack --mode development --progress",
+    "prod": "webpack --mode production --progress",
+    "pub": "npm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morioh Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Morioh-Lab/react/issues"
+  },
+  "homepage": "https://github.com/Morioh-Lab/react/packages/resource#readme",
+  "devDependencies": {
+    "@types/node": "^14.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.0",
+    "run-script-webpack-plugin": "^0.0.11",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}

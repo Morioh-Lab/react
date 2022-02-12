@@ -88,12 +88,13 @@ function Editor(props: EditorProps): JSX.Element | null {
                 }
             });
 
-            view.on('clipboardInput', (event: any, data: { dataTransfer: any; content: any; }) => {
-                const dataTransfer = data.dataTransfer;
-                let content = dataTransfer.getData('text/html').replace(/<img[^>]*>/g, "");
-                data.content = editor.data.htmlProcessor.toView(content);
-                // view.scrollToTheSelection();
-            }, { priority: 'high' });
+            view.on('clipboardInput', (event: any, data: any) => {
+                let content = data.dataTransfer.getData('text/html');
+                if (content) {
+                    content = content.replace(/<img[^>]*>/g, "");
+                    data.content = editor.data.htmlProcessor.toView(content);
+                }
+            });
 
 
             // The `onReady` callback should be fired once the `editor` property
